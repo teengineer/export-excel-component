@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "export-excel-component": "^0.1.0",
     "lodash": "^4.17.21",
     "moment": "^2.29.4",
     "next": "12.3.1",
