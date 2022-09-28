@@ -5,7 +5,7 @@ import { useMemo, useState, useEffect } from 'react'
 import DataTable from 'react-data-table-component'
 import ExportExcel from './components/export-excel'
 import styles from "../styles/Home.module.css";
-import ExcelExports from 'export-excel-component'
+// import { ExportExcel } from 'export-excel-component'
 
 export default function Home() {
     const [data, setData] = useState([]);
@@ -103,18 +103,6 @@ export default function Home() {
                     }
                     pageName="SatisHareketleri"
                     ></ExcelExports> */}
-                <ExcelExports.ExportExcel
-                    columns={columns}
-                    data={data?.filter(r => {
-                        if (query === '') return true
-                        const fields = _.pick(r, ['title', 'director', 'runtime', '']) as any[]
-                        return Object.values(fields)
-                            .join(' ')
-                            .toLowerCase()
-                            .includes(query.toLowerCase())
-                    })
-                    }
-                    pageName="SatisHareketleri"></ExcelExports.ExportExcel>
                 <DataTable columns={columns} data={data} pagination />
 
             </main>
