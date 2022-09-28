@@ -5,14 +5,14 @@ import React from "react";
 
 const XLSX = require('xlsx');
 
-interface ExportExcelProps {
+// interface ExportExcelProps {
 
-    columns: any[],
-    data: any[],
-    pageName: string,
-}
+//     columns: any[],
+//     data: any[],
+//     pageName: string,
+// }
 
-const ExportExcel: FC<ExportExcelProps> = ({ columns, data, pageName }) => {
+const ExportExcel = ({ columns, data, pageName }) => {
     function download() {
         const data_ = cloneDeep(data)
         data_.map(obj => Object.keys(obj).forEach((key) => {
