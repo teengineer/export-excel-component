@@ -20,10 +20,10 @@ const ExportExcel = ({ columns, data, pageName }) => {
         const data_ = cloneDeep(data)
         data_.map(obj => Object.keys(obj).forEach((key) => {
             if (columns) {
-                if (columns.filter(x => x.sortField! === key).length === 0) {
+                if (columns.filter(x => x.sortField === key).length === 0) {
                     delete obj[key];
                 }
-                else if (obj[key].tr !== undefined) {
+                else if (obj[key].tr) {
                     obj[key] = obj[key].tr
                 }
             }
