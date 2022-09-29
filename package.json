@@ -1,6 +1,7 @@
 {
   "name": "export-excel-component",
   "version": "5.5.0",
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
