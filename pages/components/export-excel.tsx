@@ -13,6 +13,9 @@ const XLSX = require('xlsx');
 // }
 
 const ExportExcel = ({ columns, data, pageName }) => {
+    console.log("columns", columns);
+    console.log("data", data);
+    console.log("pageName", pageName);
     function download() {
         const data_ = cloneDeep(data)
         data_.map(obj => Object.keys(obj).forEach((key) => {
